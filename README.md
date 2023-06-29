@@ -36,7 +36,7 @@ To get started, follow these steps:
 1. Clone this repository to your local machine.
 2. Install the required dependencies as mentioned in the prerequisites section.
 3. Replace the placeholder `WEATHER_API_KEY` in the DAG file (`our_weather_importer.py`) with your actual API key obtained from the data provider.
-4. Customize the DAG settings and variables based on your requirements.
+4. Customise the DAG settings and variables based on your requirements.
 
 ## Usage
 
