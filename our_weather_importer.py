@@ -8,12 +8,12 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 
 # Airflow constants and variables
-DAG_NAME = "weather_importer"
+DAG_NAME = "our_weather_importer"
 
 # Spanish weather data
 WEATHER_DATA_PROVIDER = "AEMET"
 WEATHER_URL = "https://opendata.aemet.es/opendata/api/observacion/convencional/todas"
-WEATHER_API_KEY = "TO_BE_DEFINED" # :-)
+WEATHER_API_KEY = "TO_BE_DEFINED"  # :-)
 
 # Airflow DAG arguments
 ARGS = {
@@ -166,10 +166,11 @@ def import_weather():
                 ).strftime(DATE_TIME_ISO_FORMAT)
                 if result.get("hr"):
                     converted_item["data"]["relativeHumidity"] = result.get("hr") / 100
-                # Get the corresponding attributes from the 
+                # Get the corresponding attributes from the
                 for key in aemet_translation:
                     converted_item["data"][key] = result.get(aemet_translation[key])
                 # print(converted_item)
+
 
 # A DAG (Directed Acyclic Graph) represents the overall workflow or pipeline in Airflow.
 # It is a collection of tasks and their dependencies, organised in a directed acyclic graph structure.
