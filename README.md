@@ -15,9 +15,9 @@ It serves as an onboarding session for some hands-on experience with the Urban P
 
 ## Introduction
 
-The Airflow Weather Importer is a data pipeline that leverages Airflow, an open-source platform to programmatically author, schedule, and monitor workflows. It retrieves weather data from a specific data provider, processes it, and converts it into a standardized data model following the Smart Data Model specification.
+The Airflow Weather Importer is a data pipeline that leverages Airflow, an open-source platform, to programmatically author, schedule, and monitor workflows. It retrieves weather data from a specific data provider, processes it, and converts it into a standardised data model following the SmartDataModel specifications.
 
-The DAG is scheduled to run at regular intervals (every 15 minutes) and fetches weather observations for a specific city. It uses the provided data provider's API and converts the retrieved data into the `WeatherObserved` Smart Data Model format.
+The DAG is scheduled to run at regular intervals (every 15 minutes) and fetches weather observations for a specific city. It uses the provided data provider's API and converts the retrieved data into the `WeatherObserved` SmartDataModel format.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ Feel free to explore the DAG file and customise it according to your needs. You 
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
-Please use black for code formatting and isort. Ruff is also welcome for 
+Please use `black` for code formatting and `isort`. `ruff` is also welcome as code linter.
 
 ## License
 
